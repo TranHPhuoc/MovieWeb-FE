@@ -8,7 +8,9 @@ export const getCommentsByTmdbId = async (tmdbId: string): Promise<Comment[]> =>
         method: 'GET',
         credentials: 'include',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+            'Origin': 'https://movieweb1302.netlify.app'
         }
     });
 

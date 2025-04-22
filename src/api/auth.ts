@@ -48,7 +48,8 @@ export const register = async (data: RegisterData): Promise<AuthResponse> => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Accept': 'application/json'
+        'Accept': 'application/json',
+        'Origin': 'https://movieweb1302.netlify.app'
       },
       credentials: 'include',
       body: JSON.stringify(data),
@@ -70,7 +71,8 @@ export const login = async (data: LoginData): Promise<AuthResponse> => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Accept': 'application/json'
+        'Accept': 'application/json',
+        'Origin': 'https://movieweb1302.netlify.app'
       },
       credentials: 'include',
       body: JSON.stringify(data),

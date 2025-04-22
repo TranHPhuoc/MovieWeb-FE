@@ -65,7 +65,9 @@ export const movieApi = {
         const response = await fetch(`${API_URL}/popular?page=${page}`, {
             credentials: 'include',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+                'Origin': 'https://movieweb1302.netlify.app'
             }
         });
         const data = await response.json();
@@ -76,7 +78,9 @@ export const movieApi = {
         const response = await fetch(`${API_URL}/trending?page=${page}`, {
             credentials: 'include',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+                'Origin': 'https://movieweb1302.netlify.app'
             }
         });
         const data = await response.json();
