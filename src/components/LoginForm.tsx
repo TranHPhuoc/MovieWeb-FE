@@ -6,7 +6,7 @@ import { Box, TextField, Button, Typography, Container } from "@mui/material";
 
 // Hàm gọi API backend để đăng nhập
 const loginWithBackend = async (email: string, password: string) => {
-  const response = await fetch("http://https://movieweb-production.up.railway.app/api/v1/login", {
+  const response = await fetch("http://movieweb-production.up.railway.app/api/v1/login", {
     method: "POST",
     credentials: "include", // để gửi cookie
     headers: {

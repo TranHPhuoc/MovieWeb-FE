@@ -56,7 +56,7 @@ export const WatchMovie = () => {
     const fetchComments = async () => {
       if (!movieId) return;
       try {
-        const response = await fetch(`http://localhost:8080/api/v1/comment/${movieId}`, {
+        const response = await fetch(`http://movieweb-production.up.railway.app/api/v1/comment/${movieId}`, {
           credentials: 'include'
         });
         if (response.ok) {
@@ -73,7 +73,7 @@ export const WatchMovie = () => {
   const handleCommentSubmit = async (content: string) => {
     if (!movieId) return;
     try {
-      const response = await fetch(`http://localhost:8080/api/v1/comment/${movieId}`, {
+      const response = await fetch(`http://movieweb-production.up.railway.app/api/v1/comment/${movieId}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

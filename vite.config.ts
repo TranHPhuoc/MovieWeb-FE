@@ -5,10 +5,9 @@ export default defineConfig({
   plugins: [react()],
   base: './',
   server: {
-    port: 3000,
     proxy: {
       '/api/v1': {
-        target: 'http://localhost:8080',
+        target: 'http://movieweb-production.up.railway.app',
         changeOrigin: true,
         secure: false,
         ws: true,
@@ -26,7 +25,7 @@ export default defineConfig({
       }
     },
     cors: {
-      origin: 'http://localhost:3000',
+      origin: 'https://movieweb1302.netlify.app',
       methods: ['GET', 'POST', 'PUT', 'DELETE'],
       credentials: true
     }

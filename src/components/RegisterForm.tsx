@@ -45,7 +45,7 @@ const RegisterForm = () => {
     }
 
     try {
-      const response = await fetch("http://https://movieweb-production.up.railway.app/api/v1/users", {
+      const response = await fetch("http://movieweb-production.up.railway.app/api/v1/users", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -44,7 +44,7 @@ export const MovieDetail = () => {
       if (!movieId) return;
       try {
         const pureMovieId = movieId.toString().split('-')[0];
-        const response = await fetch(`http://localhost:8080/api/v1/comment/${pureMovieId}`, {
+        const response = await fetch(`http://movieweb-production.up.railway.app/api/v1/comment/${pureMovieId}`, {
           credentials: 'include'
         });
         if (response.ok) {
@@ -62,7 +62,7 @@ export const MovieDetail = () => {
     if (!movieId) return;
     try {
       const pureMovieId = movieId.toString().split('-')[0];
-      const response = await fetch(`http://localhost:8080/api/v1/comment/${pureMovieId}`, {
+      const response = await fetch(`http://movieweb-production.up.railway.app/api/v1/comment/${pureMovieId}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

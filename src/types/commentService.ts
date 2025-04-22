@@ -1,7 +1,7 @@
 // services/commentService.ts
 import { Comment } from "./comments";
 
-const API_URL = 'http://localhost:8080/api/v1/comment';
+const API_URL = 'http://movieweb-production.up.railway.app/api/v1/comment';
 
 export const getCommentsByTmdbId = async (tmdbId: string): Promise<Comment[]> => {
     const res = await fetch(`${API_URL}/${tmdbId}`, {

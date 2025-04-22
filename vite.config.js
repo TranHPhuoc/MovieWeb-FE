@@ -25,7 +25,7 @@ export default defineConfig({
             }
         },
         cors: {
-            origin: 'http://localhost:3000',
+            origin: 'https://movieweb1302.netlify.app',
             methods: ['GET', 'POST', 'PUT', 'DELETE'],
             credentials: true
         }
