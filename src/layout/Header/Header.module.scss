@@ -1,0 +1,155 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0f111a;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.logo-search-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+  }
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.9rem;
+  font-weight: 600;
+}
+
+.logo-img {
+  width: 8rem;
+  height: auto;
+  margin-right: 7px;
+}
+
+.first-titl {
+  color: var(--primary);
+}
+.last-titl {
+  color: black;
+}
+
+.action {
+  display: none;
+}
+
+.search-mobile {
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  font-size: 1.8rem;
+  margin-right: 7px;
+  color: rgba(22, 24, 35, 0.34);
+  &:active {
+    color: rgba(22, 24, 35, 0.5);
+  }
+}
+
+.btn-login {
+  display: block;
+  padding: 8px 16px;
+  color: white;
+  background-color: var(--primary);
+  border-radius: 92px;
+  font-size: 1.4rem;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.search-container {
+  width: 100%;
+  max-width: 500px;
+  height: 38px;
+  position: relative;
+  z-index: 1000;
+  margin-bottom: 10px;
+}
+
+.search-box {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  transition: all 0.2s ease;
+
+  input {
+    flex: 1;
+    height: 100%;
+    background: transparent;
+    color: #fff;
+    font-size: 14px;
+    caret-color: #fff;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+
+
+  .clear {
+    position: absolute;
+    right: 10px;
+    top: 65%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    cursor: pointer;
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+
+  .loading {
+    position: absolute;
+    right: 10px;
+    top: 65%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    animation: spinner 0.8s linear infinite;
+  }
+}
+
+@keyframes spinner {
+  from {
+    transform: translateY(-50%) rotate(0);
+  }
+  to {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+
+@media (max-width: 740px) {
+  .wrapper {
+    padding: 12px 16px;
+  }
+
+  .search-container {
+    max-width: 280px;
+    margin-bottom: 10px;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .logo-img {
+    width: 5rem;
+  }
+}

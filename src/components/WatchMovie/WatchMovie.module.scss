@@ -1,0 +1,192 @@
+.watchContainer {
+  color: white;
+  padding: 60px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.movieInfo {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+.posterSection {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 1.5rem;
+
+  .poster {
+    width: 120px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .basicInfo {
+    flex: 1;
+
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .meta {
+      display: flex;
+      gap: 16px;
+      color: #9ca3af;
+      font-size: 0.9rem;
+
+      span {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+    }
+  }
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+
+  .genres, .cast {
+    strong {
+      color: #9ca3af;
+      margin-right: 8px;
+    }
+  }
+
+  .overview {
+    strong {
+      display: block;
+      color: #9ca3af;
+      margin-bottom: 6px;
+    }
+
+    p {
+      line-height: 1.5;
+      color: #e5e5e5;
+    }
+  }
+}
+.credits {
+  margin-top: 2rem;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.castSection {
+  margin-bottom: 2rem;
+}
+
+.castList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.castItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.75rem;
+  border-radius: 8px;
+}
+
+.castImage {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.castInfo {
+  flex: 1;
+}
+
+.castName {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0.25rem;
+}
+
+.characterName {
+  font-size: 0.875rem;
+  color: #9ca3af;
+}
+
+.crewSection {
+  margin-top: 2rem;
+}
+
+.crewList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.crewItem {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.75rem;
+  gap: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.crewName {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0.25rem;
+}
+.loading {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .watchContainer {
+    padding: 10px;
+  }
+
+  .posterSection {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .poster {
+      width: 160px;
+    }
+
+    .basicInfo {
+      h1 {
+        font-size: 1.25rem;
+      }
+
+      .meta {
+        justify-content: center;
+      }
+    }
+  }
+
+  .details {
+    text-align: center;
+  }
+}
+  

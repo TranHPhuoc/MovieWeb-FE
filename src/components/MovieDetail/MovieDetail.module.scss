@@ -1,0 +1,281 @@
+.container {
+    position: relative;
+    min-height: 100vh;
+    color: white;
+}
+
+.button1 {
+    background: #e50914;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    width: 40%;
+}
+
+.backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(15, 17, 26, 0.95) 20%, rgba(15, 17, 26, 0.85) 50%, rgba(15, 17, 26, 0.75));
+}
+
+.content {
+    display: flex;
+    padding: 40px;
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.posterWrapper {
+    flex-shrink: 0;
+}
+
+.poster {
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.info {
+    flex: 1;
+    padding-top: 20px;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.year {
+    opacity: 0.8;
+    margin-left: 10px;
+}
+
+.meta {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.score {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #1a1c25;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.scoreLabel {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.favoriteBtn {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: #1a1c25;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+
+    &:hover {
+        background: #2a2d3a;
+    }
+
+    &.active {
+        color: #ff4081;
+    }
+}
+
+.overview {
+    margin-bottom: 30px;
+
+    h3 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+    }
+
+    p {
+        line-height: 1.6;
+        opacity: 0.8;
+    }
+}
+
+.credits {
+    margin-top: 2rem;
+}
+
+.sectionTitle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.castSection {
+    margin-bottom: 2rem;
+}
+
+.castList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.castItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.75rem;
+    border-radius: 8px;
+}
+
+.castImage {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.castInfo {
+    flex: 1;
+}
+
+.castName {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0.25rem;
+}
+
+.characterName {
+    font-size: 0.875rem;
+    color: #9ca3af;
+}
+
+.crewSection {
+    margin-top: 2rem;
+}
+
+.crewList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.crewItem {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.75rem;
+    gap: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.crewName {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0.25rem;
+}
+
+.jobTitle {
+    font-size: 0.875rem;
+    color: #9ca3af;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 1.2rem;
+}
+
+.overviews {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.overviewTitle {
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.overviewText {
+    color: #e5e5e5;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.playerWrapper {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    width: 100%;
+    height: 0;
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .posterWrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .poster {
+        width: 200px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+}

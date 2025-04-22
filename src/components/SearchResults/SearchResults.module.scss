@@ -1,0 +1,60 @@
+.results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(30, 30, 30, 0.95);
+    border-radius: 4px;
+    margin-top: 4px;
+    max-height: 400px;
+    overflow-y: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.loading,
+.error {
+    padding: 16px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.error {
+    color: #ff6b6b;
+}
+
+.movieItem {
+    display: flex;
+    padding: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+}
+
+.poster {
+    width: 45px;
+    height: 68px;
+    object-fit: cover;
+    border-radius: 2px;
+    margin-right: 12px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.year {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+} 
