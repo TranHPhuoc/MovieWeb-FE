@@ -7,7 +7,7 @@ export default defineConfig({
         port: 3000,
         proxy: {
             '/api/v1': {
-                target: 'http://movieweb-production.up.railway.app/',
+                target: 'https://movieweb-production.up.railway.app/',
                 changeOrigin: true,
                 secure: false,
                 ws: true,

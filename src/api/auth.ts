@@ -1,4 +1,4 @@
-const API_URL = '/api/v1';
+const API_URL = 'https://movieweb-production.up.railway.app/api/v1';
 
 interface LoginData {
   email: string;

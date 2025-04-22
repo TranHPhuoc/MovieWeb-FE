@@ -39,7 +39,7 @@ const AdminDashboard = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch('http://movieweb-production.up.railway.app/api/v1/users', {
+      const response = await fetch('https://movieweb-production.up.railway.app/api/v1/users', {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('accessToken')}`
         }
@@ -62,7 +62,7 @@ const AdminDashboard = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch('http://movieweb-production.up.railway.app/api/v1/users', {
+      const response = await fetch('https://movieweb-production.up.railway.app/api/v1/users', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -107,7 +107,7 @@ const AdminDashboard = () => {
         age: parseInt(String(formData.age)) || 0,
         address: formData.address || '',
       };
-      const response = await fetch(`http://movieweb-production.up.railway.app/api/v1/users`, {
+      const response = await fetch(`https://movieweb-production.up.railway.app/api/v1/users`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -151,7 +151,7 @@ const AdminDashboard = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch(`http://movieweb-production.up.railway.app/api/v1/users/${userId}`, {
+      const response = await fetch(`https://movieweb-production.up.railway.app/api/v1/users/${userId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('accessToken')}`
